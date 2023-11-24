@@ -16,7 +16,7 @@ body {
     background-blend-mode: overlay;
     color: #E5D96C;
     font-size: 18px;
-    font-family: space grotesk, serif;
+    font-family: "space grotesk", serif;
 }
 
 main {
@@ -25,10 +25,11 @@ main {
     flex-wrap: wrap;
 }
 
+
 header > h1 {
     text-align: center;
     padding: 15px;
-
+    font-size: 40px;
 }
 
 article {
@@ -37,7 +38,7 @@ article {
     margin: 15px 10px;
     text-align: left;
     background-color: rgba(8, 22, 64, 0.7);
-    width: 350px;
+    width: 400px;
 }
 
 article > h2 {
@@ -62,7 +63,72 @@ article:last-of-type {
 }
 
 .in-progress li:nth-child(odd) {
-    background-color: rgba(30, 73, 203, 0.85);
+    background-color: rgba(105, 143, 240, 0.789);
+}
+
+.to-do-list li:nth-child(even) {
+    background-color: rgba(105, 143, 240, 0.789);
+}
+
+.done-list li:nth-child(odd) {
+    background-color: rgba(105, 143, 240, 0.789);
+}
+
+.in-progress em {
+    background-color: green;
+}
+
+.in-progress em::after {
+    content: "\01F384";
+    font-size: 30px;
+}
+
+/*animation*/
+
+input[type="checkbox"]:checked + span::after {
+    content: "\01F92F";
+    padding-left: 5px;
+    font-size: 20px;
+    position: absolute;
+    animation: rotate 0.7s;
+
+}
+
+input[type="checkbox"]:checked + #yeah::after {
+    content: "\01F970";
+    padding-left: 5px;
+    font-size: 40px;
+    position: absolute;
+    animation: rotate 0.5s;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
 }
 
 
+/*@keyframes slidein {
+    from {margin-left: 50px;}
+    to {margin-left: 0px;}
+}*/
+
+/*Footer*/
+
+footer {
+    background-color: black;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    padding: 10px 0;
+    margin-top: 250px;
+    color: white;
+    position: sticky;
+}
+
+footer span {
+    color: red;
+    font-size: 20px;
+}
+
+/*end*/
