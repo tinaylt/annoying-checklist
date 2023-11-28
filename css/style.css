@@ -91,7 +91,6 @@ input[type="checkbox"]:checked + span::after {
     font-size: 20px;
     position: absolute;
     animation: rotate 0.7s;
-
 }
 
 input[type="checkbox"]:checked + #yeah::after {
@@ -100,6 +99,16 @@ input[type="checkbox"]:checked + #yeah::after {
     font-size: 40px;
     position: absolute;
     animation: rotate 0.5s;
+}
+
+input[type="checkbox"]:checked + span {
+    font-weight: bold;
+    color: white;
+}
+
+input[type="checkbox"]:checked + #yeah {
+    font-weight: bold;
+    color: red;
 }
 
 @keyframes rotate {
